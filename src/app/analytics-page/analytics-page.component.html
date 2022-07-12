@@ -1,0 +1,29 @@
+<div id="page-layout">
+    <section id="sidebar-section">
+        <app-sidebar-menu></app-sidebar-menu>
+    </section>
+    <section id="content-section">
+        <header>
+            <button class="demo-balance-button">Demo balance <br> <span>1000$</span> </button>
+            <button class="service-balance-button">Service balance <br> <span>1000$</span> </button>
+            <button id="notifications"></button>
+            <p id="user-name">User name</p>
+            <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle></button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button ngbDropdownItem>Action - 1</button>
+                  <button ngbDropdownItem>Another Action</button>
+                  <button ngbDropdownItem>Something else is here</button>
+                </div>
+            </div>
+        </header>
+        <div class="crypto-container">
+          <app-cryptocurrency></app-cryptocurrency>
+        </div>
+    </section>
+</div>
+
+
+
+
+     

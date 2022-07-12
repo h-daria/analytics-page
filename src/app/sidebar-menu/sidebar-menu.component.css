@@ -1,0 +1,80 @@
+#logo {
+    margin-top: 1rem;
+}
+
+.sidebar-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #ECECEC;
+    border-bottom: 2px solid #ECECEC;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 4.25rem;
+    height: 100%;
+}
+.sidebar-slider.sidebar-slide-in {
+    width: 10rem;
+}
+
+.btnsidebar {
+    width: 1.5rem;
+    height: 1.6rem;
+    border: 1px solid #2B298A;
+    background-color: white;
+    background-image: url("../../assets/icons/right-direction-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.75rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.btnsidebar:hover{
+    background-color: #D9DADA;
+} 
+
+.btnsidebar.icon-rotate {
+    transform: rotate(180deg);
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100%;    
+    width: 100%;
+}
+
+.sidebar-item{
+    background-color: white;
+    width: 100%;
+    height: 2.25rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.sidebar-item:hover{
+    background-color: #F5F4FF;
+    border-right: 1px solid #C4C4F2;
+    cursor: pointer;
+}
+
+.sidebar-item span {
+    color: #666666;
+    font-size: 0.75rem;
+}
+hr {
+    display: block; 
+    height: 1px;
+    width: 100%;
+    border: 0;
+    border-top: 2px solid #cbbcf1;
+    margin: 0; 
+    padding: 0;
+  }

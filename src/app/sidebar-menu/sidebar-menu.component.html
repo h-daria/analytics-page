@@ -1,0 +1,20 @@
+  <div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+    <span id="logo"><img src="../../assets/logo/logo.svg" alt="app-logo"></span>
+    <button class="btnsidebar" (click)="sidebarShow = !sidebarShow"  [class.icon-rotate]="sidebarShow"></button>
+    <div class="sidebar-content">
+        <button class="sidebar-item"><img src="../../assets/icons/dashboard.svg" alt="dashboard-icon"></button>
+        <hr>
+        <button class="sidebar-item"><img src="../../assets/icons/marketplace.svg" alt="marketplace-icon"> 
+          <span *ngIf="sidebarShow"> &nbsp;Marketplace</span>
+        </button>
+        <button class="sidebar-item"><img src="../../assets/icons/analytics.svg" alt="analytics-icon"></button>
+        <button class="sidebar-item"><img src="../../assets/icons/portfolio.svg" alt="portfolio-icon"></button>
+        <button class="sidebar-item"><img src="../../assets/icons/broadcasts.svg" alt="broadcasts-icon"></button>
+        <button class="sidebar-item"><img src="../../assets/icons/pool.svg" alt="pool-icon"></button>
+        <hr>
+        <button class="sidebar-item"><img src="../../assets/icons/strategies.svg" alt="strategies-icon"></button>
+        <button class="sidebar-item"><img src="../../assets/icons/indicators.svg" alt="indicators-icon"></button>
+        <button class="sidebar-item"><img src="../../assets/icons/automation.svg" alt="automation-icon"></button>
+        <button class="sidebar-item"><img src="../../assets/icons/info.svg" alt="info-icon"></button>
+    </div>
+  </div>
