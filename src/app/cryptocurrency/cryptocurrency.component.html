@@ -1,0 +1,33 @@
+<div ngbDropdown (openChange)="toggle($event)" class="dropdown">
+
+    <button type="button" class="btn btn-outline-primary" id="dropdownForm" 
+    [class.dropdownFocused]="dropdownOpened" ngbDropdownToggle>
+        <div class="crypto-name">
+        <img src="../../assets/icons/star.svg" alt="star-icon">
+        <img src="../../assets/icons/bitcoin.svg" alt="btc-icon">
+        <p>Bitcoin</p>  
+        <span class="crypto-abbreviation">BTC</span>
+        </div>
+        <img src="../../assets/icons/arrow.svg" alt="arrow-icon" id="arrow-icon" [class.icon-rotate]="dropdownOpened">
+    </button>
+
+    <div ngbDropdownMenu aria-labelledby="dropdownForm" class="dropdown-menu">
+        <input type="search" class="search-input" placeholder="Search">
+        <div class="watchlist">
+            <span>Watchlist</span>
+            <button type="button" ngbDropdownItem>
+                <img src="../../assets/icons/gray-solid-star.svg" alt="gray-solid-star-icon">
+            </button>
+        </div>
+        <div class="category">
+            <span>Category</span>
+            <button type="button" ngbDropdownItem>
+                <img src="../../assets/icons/star.svg" alt="star-icon">
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="crypto-info-container">
+    <app-cryptocurrency-info></app-cryptocurrency-info>
+</div>

@@ -1,0 +1,72 @@
+.dropdown {
+    width: 20rem;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+#dropdownForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2.875;
+    color: black;
+    background-color: white;
+    font-size: 1.25rem;
+    padding: 0.5rem 0.95rem;
+    margin: 1.5rem;
+    border: 1px solid #ECECEC;
+    border-radius: 4px;
+}
+
+#dropdownForm:hover {
+    background-color: #D9DADA;
+}
+
+#dropdownForm.dropdownFocused {
+    background-color: #F5F4FF;
+    border: 2px solid #3F3BC3;
+}
+ 
+#arrow-icon.icon-rotate {
+    transform: rotate(180deg);
+}
+
+.crypto-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.crypto-name p {
+    margin-bottom: 0;
+}
+
+#dropdownForm img {
+    padding: 0 0.3rem;
+}
+
+.crypto-abbreviation {
+    color: #666666;
+    padding: 0 0.3rem;
+}
+
+.dropdown-menu {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.search-input {
+    background-image: url("../../assets/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: 1rem !important;
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid #D9DADA;
+    border-radius: 4px;
+    font-size: 1.25rem;
+    color: #525252;
+    padding: 0.5rem 2.75rem;
+}
