@@ -11,7 +11,7 @@ import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { CryptocurrencyComponent } from './cryptocurrency/cryptocurrency.component';
 import { CryptocurrencyInfoComponent } from './cryptocurrency-info/cryptocurrency-info.component';
 import { AdditionalInfoComponent } from './additional-info/additional-info.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { AdditionalInfoComponent } from './additional-info/additional-info.compo
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

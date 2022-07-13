@@ -4,9 +4,9 @@
     [class.dropdownFocused]="dropdownOpened" ngbDropdownToggle>
         <div class="crypto-name">
         <img src="../../assets/icons/star.svg" alt="star-icon">
-        <img src="../../assets/icons/bitcoin.svg" alt="btc-icon">
-        <p>Bitcoin</p>  
-        <span class="crypto-abbreviation">BTC</span>
+        <img src={{selectedCryptocurrency?.iconPath}}>
+        <p>{{selectedCryptocurrency?.name ?? 'Search cryptocurrency'}}</p>  
+        <span class="crypto-abbreviation">{{selectedCryptocurrency?.abbreviation}}</span>
         </div>
         <img src="../../assets/icons/arrow.svg" alt="arrow-icon" id="arrow-icon" [class.icon-rotate]="dropdownOpened">
     </button>
@@ -15,19 +15,25 @@
         <input type="search" class="search-input" placeholder="Search">
         <div class="watchlist">
             <span>Watchlist</span>
-            <button type="button" ngbDropdownItem>
+            <button type="button" ngbDropdownItem class="crypto-button" (click)="selectedCryptocurrency = cryptocurrency" *ngFor="let cryptocurrency of cryptocurrencies">
                 <img src="../../assets/icons/gray-solid-star.svg" alt="gray-solid-star-icon">
+                <img src={{cryptocurrency.iconPath}} alt="crypto-icon">
+                <p>{{cryptocurrency.name}}</p>  
+                <span class="crypto-abbreviation">{{cryptocurrency.abbreviation}}</span>
             </button>
         </div>
         <div class="category">
             <span>Category</span>
-            <button type="button" ngbDropdownItem>
+            <button type="button" ngbDropdownItem class="crypto-button" *ngFor="let cryptoCategory of cryptoCategories">
                 <img src="../../assets/icons/star.svg" alt="star-icon">
+                <img src={{cryptoCategory.iconPath}} alt="crypto-icon">
+                <p>{{cryptoCategory.name}}</p>  
+                <span class="crypto-abbreviation">{{cryptoCategory.abbreviation}}</span>
             </button>
         </div>
     </div>
 </div>
 
-<div class="crypto-info-container">
-    <app-cryptocurrency-info></app-cryptocurrency-info>
+<div class="crypto-info-container" *ngIf="!!selectedCryptocurrency">
+    <app-cryptocurrency-info [selectedCryptocurrency]="selectedCryptocurrency"></app-cryptocurrency-info>
 </div>

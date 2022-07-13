@@ -1,0 +1,14 @@
+{
+    "cryptoCategories": [
+        {
+          "name": "Ether",
+          "abbreviation": "ETH",
+          "iconPath": "../assets/icons/Cryptocurrency-gray.svg"
+        },
+        {
+          "name": "Tether",
+          "abbreviation": "USDT",
+          "iconPath": "../assets/icons/Cryptocurrency-green.svg"
+        }
+      ]
+}

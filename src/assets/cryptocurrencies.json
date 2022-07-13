@@ -1,0 +1,62 @@
+{
+  "cryptocurrencies": [
+    {
+      "name": "Bitcoin",
+      "abbreviation": "BTC",
+      "iconPath": "../../assets/icons/bitcoin.svg",
+      "category": "",
+      "trendState": "falling trend",
+      "stateIconPath": "../../assets/icons/falling-trend-icon.svg",
+      "trading": "-12.38",
+      "resistantLevels": {
+        "long": {
+          "level": 30670.53,
+          "target": 32282.13
+        },
+        "short": {
+          "level": 30670.53,
+          "target": 29970.3
+        }
+      },
+      "supportLevels": {
+        "long": {
+          "level": 29970.3,
+          "target": 30670.53
+        },
+        "short": {
+          "level": 29970.3 ,
+          "target": 28338.36
+        }
+      }
+    },
+    {
+      "name": "FlowerCoin",
+      "abbreviation": "FLW",
+      "iconPath": "../../assets/icons/bitcoin.svg",
+      "category": "",
+      "trendState": "falling trend",
+      "stateIconPath": "../../assets/icons/falling-trend-icon.svg",
+      "trading": "-12.38",
+      "resistantLevels": {
+        "long": {
+          "level": 30670.53,
+          "target": 32282.13
+        },
+        "short": {
+          "level": 30670.53,
+          "target": 29970.3
+        }
+      },
+      "supportLevels": {
+        "long": {
+          "level": 29970.3,
+          "target": 30670.53
+        },
+        "short": {
+          "level": 29970.3 ,
+          "target": 28338.36
+        }
+      }
+    }
+  ]
+}
