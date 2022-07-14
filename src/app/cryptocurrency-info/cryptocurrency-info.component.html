@@ -1,1 +1,63 @@
-<p>cryptocurrency-info works!</p>
+<div class="crypto-info-container">
+    <section class="diagrams">
+        <img src="{{selectedCryptocurrency?.diagrams?.diagram1Path}}" alt="">
+    </section>
+    <section class="info">
+        <div class="infotext">
+            <div class="header">
+                <h1>BTCUSDT <span id="date">{{selectedCryptocurrency?.date | date: 'dd.MM.YYYY'}}</span> <span>(0.82%)</span></h1> 
+                <ul>
+                    <li>O: {{selectedCryptocurrency?.periodPrices?.O}} <span class="vl"></span></li>
+                    <li>H: {{selectedCryptocurrency?.periodPrices?.H}} <span class="vl"></span></li>
+                    <li>L: {{selectedCryptocurrency?.periodPrices?.L}} <span class="vl"></span></li>
+                    <li>C: {{selectedCryptocurrency?.periodPrices?.C}}</li>
+                </ul>
+            </div>
+            <div class="currency-state">
+                <p>Bitcoin is an a <span class="red-interpolation">{{selectedCryptocurrency?.trendState}}</span>
+                    <img src={{selectedCryptocurrency?.stateIconPath}} alt="state Icon">
+                </p>
+                <p>Trading <strong>{{selectedCryptocurrency?.trading}}</strong>% below the 4h 23EMA <strong>(34567.1)</strong></p>
+            </div>
+
+            <div class="levels">
+                <h2 [ngStyle]="{'color': '#B91C1C'}">RESISTANT LEVELS</h2>
+                <p>
+                    <strong>Long</strong> -  breakout of the level with a retest of 
+                    <strong class="red-interpolation">{{selectedCryptocurrency?.resistantLevels?.long?.level}}</strong>
+                     with a target 
+                    <strong class="red-interpolation">{{selectedCryptocurrency?.resistantLevels?.long?.target}}</strong>
+                </p>
+                <p>
+                    <strong>Short</strong> - pullback of the level 
+                    <strong class="red-interpolation">{{selectedCryptocurrency?.resistantLevels?.short?.level}}</strong>
+                     with a target 
+                    <strong class="red-interpolation">{{selectedCryptocurrency?.resistantLevels?.short?.target}}</strong>
+                </p>
+            </div>
+
+            <div class="levels">
+                <h2 [ngStyle]="{'color': '#15803D'}">SUPPORT LEVELS</h2>
+                <p>
+                    <strong>Long</strong> - pullback of the level 
+                    <strong class="green-interpolation">{{selectedCryptocurrency?.supportLevels?.long?.level}}</strong> 
+                     with a target 
+                    <strong class="green-interpolation">{{selectedCryptocurrency?.supportLevels?.long?.target}}</strong>
+                </p>
+                <p>
+                    <strong>Short</strong> - breakout of the level with a retest of 
+                    <strong class="green-interpolation">{{selectedCryptocurrency?.supportLevels?.short?.level}}</strong> 
+                     with a target 
+                    <strong class="green-interpolation">{{selectedCryptocurrency?.supportLevels?.short?.target}}</strong>
+                </p>
+            </div>
+        </div>
+        <button id="upgrAnalytics">Upgrade analytics</button>
+    </section>
+</div>
+
+<div class="analytics">
+    <app-crypto-analytics></app-crypto-analytics>
+</div>
+
+<app-additional-info></app-additional-info>

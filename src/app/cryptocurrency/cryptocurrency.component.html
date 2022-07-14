@@ -12,7 +12,7 @@
     </button>
 
     <div ngbDropdownMenu aria-labelledby="dropdownForm" class="dropdown-menu">
-        <input type="search" class="search-input" placeholder="Search">
+        <input type="search" id="search-input" placeholder="Search">
         <div class="watchlist">
             <span>Watchlist</span>
             <button type="button" ngbDropdownItem class="crypto-button" (click)="selectedCryptocurrency = cryptocurrency" *ngFor="let cryptocurrency of cryptocurrencies">

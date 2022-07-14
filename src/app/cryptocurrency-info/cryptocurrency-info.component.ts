@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
+import { Cryptocurrency } from '../models/cryptocurrency';
 
 @Component({
   selector: 'app-cryptocurrency-info',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cryptocurrency-info.component.css']
 })
 export class CryptocurrencyInfoComponent implements OnInit {
+  @Input() selectedCryptocurrency: Cryptocurrency | null = null;
 
   constructor() { }
 
   ngOnInit(): void {
+    if( this.selectedCryptocurrency != undefined) {
+        this.selectedCryptocurrency.date = new Date();
+    }
   }
 
 }

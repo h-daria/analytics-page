@@ -16,7 +16,6 @@
     background-color: white;
     font-size: 1.25rem;
     padding: 0.5rem 0.95rem;
-    margin: 1.5rem;
     border: 1px solid #ECECEC;
     border-radius: 4px;
 }
@@ -42,6 +41,11 @@
 .category span {
     font-size: 0.875rem;
     margin-left: 0.9rem;
+}
+
+.crypto-button span {
+    font-size: 1.25rem;
+    margin: 0;
 }
 
 .crypto-name {
@@ -94,7 +98,7 @@
     padding: 0.5rem;
 }
 
-.search-input {
+#search-input {
     background-image: url("../../assets/icons/search.svg");
     background-repeat: no-repeat;
     background-position: 1rem !important;
@@ -106,3 +110,4 @@
     color: #525252;
     padding: 0.5rem 2.75rem;
 }
+

@@ -5,9 +5,20 @@
       "abbreviation": "BTC",
       "iconPath": "../../assets/icons/bitcoin.svg",
       "category": "",
+      "date": "",
+      "diagrams": {
+        "diagram1Path": "../assets/diagrams/diagram1.svg",
+        "diagram2Path": "../assets/diagrams/diagram2.svg"
+      },
       "trendState": "falling trend",
       "stateIconPath": "../../assets/icons/falling-trend-icon.svg",
       "trading": "-12.38",
+      "periodPrices": {
+        "O": 29941.96,
+        "H": 29941.96,
+        "L": 29941.96,
+        "C": 29941.96
+      },
       "resistantLevels": {
         "long": {
           "level": 30670.53,
@@ -34,6 +45,10 @@
       "abbreviation": "FLW",
       "iconPath": "../../assets/icons/bitcoin.svg",
       "category": "",
+      "diagrams": {
+        "diagram1Path": "../assets/diagrams/diagram1.svg",
+        "diagram2Path": "../assets/diagrams/diagram2.svg"
+      },
       "trendState": "falling trend",
       "stateIconPath": "../../assets/icons/falling-trend-icon.svg",
       "trading": "-12.38",

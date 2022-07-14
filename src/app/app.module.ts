@@ -12,6 +12,7 @@ import { CryptocurrencyComponent } from './cryptocurrency/cryptocurrency.compone
 import { CryptocurrencyInfoComponent } from './cryptocurrency-info/cryptocurrency-info.component';
 import { AdditionalInfoComponent } from './additional-info/additional-info.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CryptoAnalyticsComponent } from './crypto-analytics/crypto-analytics.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     SidebarMenuComponent,
     CryptocurrencyComponent,
     CryptocurrencyInfoComponent,
-    AdditionalInfoComponent
+    AdditionalInfoComponent,
+    CryptoAnalyticsComponent
   ],
   imports: [
     FormsModule,
