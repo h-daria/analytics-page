@@ -18,4 +18,8 @@ export class CryptocurrencyService {
     return this.http.get('../assets/cryptoCategories.json')
   }
 
+  getBitcoinOverview() {
+    return this.http.get('../assets/bitcoin-overview.json')
+  }
+
 }

@@ -1,1 +1,51 @@
-<p>additional-info works!</p>
+<div id="bitcoin-overview" *ngFor="let overview of bitcoinOverview">
+    <h1>Bitcoin overview</h1>
+    <p>Среднемесячная доходность интсрумента составляет <strong>{{overview.averageMonthlyReturn}}</strong>, 
+       при риске в <strong>{{overview.risk}}</strong>%.</p>
+    <p>Криптовалюта торговалась <strong>{{overview.saleTerm.inPlus}}</strong> и <strong>{{overview.saleTerm.inMinus}}</strong>.</p>
+    <p>Профит фактор по месяцам: <strong>{{overview.profitFactor}}</strong></p>
+    
+    <h2>Среднестрочные уровни</h2>
+    <h3>Покупка</h3>
+    <ul *ngFor="let purchase of overview.averageLevels.purchase">
+        <li>{{purchase.case}}{{purchase.percentage}}</li>
+    </ul>
+    <h3>Цели</h3>
+    <ul *ngFor="let target of overview.averageLevels.targets">
+        <li>{{target.case}}{{target.percentage}}</li>
+    </ul>
+
+    <h2>Локальные уровни</h2>
+    <h3>Поддержки для покупки в ЛОНГ</h3>
+    <ul *ngFor="let support of overview.localLevels.supportLongArray">
+        <li>{{support.case}}{{support.percentage}}</li>
+    </ul>
+    <h3>Сопротивления для продажи в ШОРТ</h3>
+    <ul *ngFor="let resist of overview.localLevels.resistShort">
+        <li>{{resist.case}}{{resist.percentage}}</li>
+    </ul>
+
+    <hr>
+    <div id="price">
+        <p>Price <span>{{overview.price}}</span></p>
+        <p>Last 30 days <span>{{overview.state}}{{overview.stateIconPath}}</span></p>
+    </div>
+    <div id="values">
+        <p>Risk</p> <p>{{overview.risk}}</p>
+        <p>Avg month P&L</p> <p>{{overview.avgMonthPL}}</p>
+        <p>Annual P&N</p> <p>{{overview.annualPN}}</p>
+    </div>
+    <h3>STATISTIC</h3>
+    <div id="statistic">
+        <p>Market cap</p> <p>{{overview.marketCap}}</p>
+        <p>Market Dominance</p> <p>{{overview.marketDominance}}</p>
+        <p>Trading Volume (24h)</p> <p>{{overview.tradingVolume}}</p>
+        <p>Volume / Market Cap</p> <p>{{overview.quotient}}</p>
+        <p>Highest price</p> <p>{{overview.highestPrice}}</p>
+        <p>Lowest price</p> <p>{{overview.lowestPrice}}</p>
+    </div>
+    <div id="diagram">
+        <h3>MONTHLY PROFIT, %</h3>
+        <google-chart [data]="stackedColumnChart"></google-chart>
+    </div>
+</div>

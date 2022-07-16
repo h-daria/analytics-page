@@ -1,0 +1,101 @@
+{
+    "bitcoinOverview": [
+        {
+            "averageMonthlyReturn": "-3.58",
+            "risk": "20.84",
+            "saleTerm": {
+                "inPlus": "5 месяцев в плюсе",
+                "inMinus": "7 месяцев в минусе"
+            },
+            "profitFactor": "0.91",
+            "averageLevels": {
+                "purchase": [{
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                }],
+                "targets": [{
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                }]
+            },
+            "localLevels": {
+                "supportLongArray": [{
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                }],
+                "resistShort": [{
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                },
+                {
+                    "case": "20526.01",
+                    "percentage": "(-6.33%)"
+                }
+            ]
+            },
+            "price": "$30,377.7",
+            "state": "-26.14%",
+            "stateIconPath": "../assets/icons/negative.svg",
+            "avgMonthPL": "$30,377.7",
+            "annualPN": "$30,377.7",
+            "marketCap": "$580,498,829,694",
+            "marketDominance": "42.42%",
+            "tradingVolume": "$19,508,783,512",
+            "quotient": "0.0337",
+            "highestPrice": "$69,044.77",
+            "lowestPrice": "$67.81"
+        }
+    ]
+}

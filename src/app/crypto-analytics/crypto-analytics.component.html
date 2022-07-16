@@ -28,8 +28,40 @@
     </div>
    
     <section class="diagrams">
-        <div class="diagrams-container">
-            <h1>Equity (+30%)</h1>
-        </div>
+            <div id="diagram1">
+                <div id="diagram1-header">
+                    <h1 style="margin: 0;">Equity (+30%)</h1>
+                    <div ngbDropdown class="d-inline-block">
+                        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Last month</button>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem>Action - 1</button>
+                        <button ngbDropdownItem>Another Action</button>
+                        <button ngbDropdownItem>Something else is here</button>
+                        </div>
+                    </div>
+                </div>
+                <google-chart [data]="lineChart"></google-chart>
+            </div>
+            
+            <div id="diagram2">
+                <h1 style="margin: 0.2rem 0;">The efficiency of the deals</h1>
+                <ejs-accumulationchart id="chart-container"  [legendSettings]="legend" >
+                    <e-accumulation-series-collection>
+                        <e-accumulation-series type='Pie' [dataSource]='piedata' xName="name" yName="value"
+                                               [dataLabel]="chartLabel" radius="70%"  [pointColorMapping]='pointColorMapping'
+                                               tooltipMappingName='text'></e-accumulation-series>
+                    </e-accumulation-series-collection>
+                </ejs-accumulationchart>
+                <div class="chart-legend">
+                    <div>
+                        <span id="icon" style="background-color: #D0ECC5;"></span>
+                        <p id="legend"> Profitable deals - 70% </p>
+                    </div>
+                    <div>
+                        <span id="icon"></span>
+                        <p id="legend">Unprofitable deals - 30% </p>
+                    </div>
+                </div>
+            </div>
     </section>
 </div>
