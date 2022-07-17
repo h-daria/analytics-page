@@ -1,0 +1,143 @@
+#bitcoin-overview {
+    width: 100%;
+    border: 1px solid #D9DADA;
+    border-radius: 4px;
+    padding: 1.5rem;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0 0 0.75rem 9rem;
+    width: 50%;
+    text-align: center;
+}
+
+#header p {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3rem;
+    margin: 0;
+}
+
+.levels-h1 {
+    text-align: left;
+    margin: 0.75rem 0;
+}
+
+h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+h3 {
+    font-size: 0.875rem;
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+hr {
+    margin: 1.875rem 0;
+    width: 100%;
+}
+
+#avgLevels {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#avgLevels ul {
+    list-style: none;
+    margin: 0 0.1rem;
+    padding: 0;
+}
+
+#avgLevels ul li {
+    padding: 0.5rem 1.625rem;
+    border: 1px solid #D9DADA;
+    border-radius: 4px;
+}
+
+.tabLe {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 0.1rem 0;
+}
+
+.tabLe ul {
+    list-style: none;
+    margin: 0.1rem 0.05rem;
+    padding: 0;
+}
+
+.table-cell {
+    padding: 0.5rem 1.625rem;
+    margin: 0 0.1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#price-table {
+    display: flex;
+}
+#price-table p {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0.625rem 1.6rem;
+}
+
+#price-table strong {
+    padding: 0.65rem 2.3rem;
+    border-radius: 4px;
+}
+
+#peachy-strong {
+    background-color: #FECACA;
+    color: #B91C1C;
+}
+
+#gray-strong {
+    background-color:  #666666;
+    color: white;
+}
+
+#price-table div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0.8rem;
+}
+
+#table-text {
+    font-size: 0.875rem;
+}
+
+#table-value {
+    font-size: 1rem;
+    background-color: #D9DADA;
+}
+
+#statistic {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0.1rem 0;
+}
+
+.grey-cell {
+    background-color: #ECECEC;
+    padding: 0.5rem 1.625rem;
+    margin: 0 0.1rem;
+    border-radius: 4px;
+}
+
+.white-cell {
+    /* background-color: #ECECEC; */
+    padding: 0.5rem 1.625rem;
+    margin: 0 0.1rem;
+    border-radius: 4px;
+}

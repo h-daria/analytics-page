@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GoogleChartInterface, GoogleChartType } from "ng2-google-charts";
 import { CryptocurrencyService } from '../cryptocurrency.service';
 import { BitcoinOverview } from '../models/bitcoin-overview';

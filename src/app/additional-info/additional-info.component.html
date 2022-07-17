@@ -1,49 +1,75 @@
 <div id="bitcoin-overview" *ngFor="let overview of bitcoinOverview">
-    <h1>Bitcoin overview</h1>
-    <p>Среднемесячная доходность интсрумента составляет <strong>{{overview.averageMonthlyReturn}}</strong>, 
-       при риске в <strong>{{overview.risk}}</strong>%.</p>
-    <p>Криптовалюта торговалась <strong>{{overview.saleTerm.inPlus}}</strong> и <strong>{{overview.saleTerm.inMinus}}</strong>.</p>
-    <p>Профит фактор по месяцам: <strong>{{overview.profitFactor}}</strong></p>
-    
-    <h2>Среднестрочные уровни</h2>
-    <h3>Покупка</h3>
-    <ul *ngFor="let purchase of overview.averageLevels.purchase">
-        <li>{{purchase.case}}{{purchase.percentage}}</li>
-    </ul>
-    <h3>Цели</h3>
-    <ul *ngFor="let target of overview.averageLevels.targets">
-        <li>{{target.case}}{{target.percentage}}</li>
-    </ul>
+    <div id="header">
+    <h1>BITCOIN OVERVIEW</h1>
 
-    <h2>Локальные уровни</h2>
-    <h3>Поддержки для покупки в ЛОНГ</h3>
-    <ul *ngFor="let support of overview.localLevels.supportLongArray">
-        <li>{{support.case}}{{support.percentage}}</li>
-    </ul>
-    <h3>Сопротивления для продажи в ШОРТ</h3>
-    <ul *ngFor="let resist of overview.localLevels.resistShort">
-        <li>{{resist.case}}{{resist.percentage}}</li>
-    </ul>
+        <p>Среднемесячная доходность интсрумента составляет <strong>{{overview.averageMonthlyReturn}}</strong>%, 
+            при риске в <strong>{{overview.risk}}</strong>%.</p>
+         <p>Криптовалюта торговалась <strong style="color: '#15803D'">{{overview.saleTerm.inPlus}}</strong> и 
+                                     <strong style="color: '#B91C1C'">{{overview.saleTerm.inMinus}}</strong>.</p>
+         <p>Профит фактор по месяцам: <strong style="color: '#B91C1C'">{{overview.profitFactor}}</strong></p>
+    </div>
+
+    
+    <h1 class="levels-h1">Среднестрочные уровни</h1>
+    <h2>Покупка</h2>
+    <div id="avgLevels">
+        <ul *ngFor="let purchase of overview.averageLevels.purchase">
+            <li><strong>{{purchase.case}}{{purchase.percentage}}</strong></li>
+        </ul>
+    </div>
+    <h2>Цели</h2>
+    <div id="avgLevels">
+        <ul *ngFor="let target of overview.averageLevels.targets">
+            <li><strong>{{target.case}}{{target.percentage}}</strong></li>
+        </ul>
+    </div>
+
+    <h1 class="levels-h1">Локальные уровни</h1>
+    <h2>Поддержки для покупки в ЛОНГ</h2>
+    <div class="tabLe">
+        <ul *ngFor="let support of overview.localLevels.supportLongArray">
+            <li class="table-cell" style="border: 2px solid #CEF5D9;"><strong>{{support.case}}{{support.percentage}}</strong></li>
+        </ul>
+    </div>
+    
+    <h2>Сопротивления для продажи в ШОРТ</h2>
+    <div class="tabLe">
+        <ul *ngFor="let resist of overview.localLevels.resistShort">
+            <li class="table-cell" style="border: 2px solid #FECACA"><strong>{{resist.case}}{{resist.percentage}}</strong></li>
+        </ul>
+    </div>
 
     <hr>
-    <div id="price">
-        <p>Price <span>{{overview.price}}</span></p>
-        <p>Last 30 days <span>{{overview.state}}{{overview.stateIconPath}}</span></p>
+    <div id="price-table">
+        <div>
+            <p>Price</p><strong id="gray-strong">{{overview.price}}</strong>
+        </div>
+        <div>
+            <p>Last 30 days</p><strong id="peachy-strong">{{overview.state}} <img src={{overview.stateIconPath}}></strong>
+        </div>
     </div>
-    <div id="values">
-        <p>Risk</p> <p>{{overview.risk}}</p>
-        <p>Avg month P&L</p> <p>{{overview.avgMonthPL}}</p>
-        <p>Annual P&N</p> <p>{{overview.annualPN}}</p>
+    <div class="tabLe">
+        <p class="table-cell" id="table-text">Risk</p>  <p class="table-cell" id="table-text">Avg month P&L</p> 
+        <p class="table-cell" id="table-text">Annual P&N</p> <p class="table-cell" id="table-value">{{overview.risk}}%</p>
+        <p class="table-cell" id="table-value">{{overview.avgMonthPL}}</p> <p class="table-cell" id="table-value">{{overview.annualPN}}</p>
     </div>
-    <h3>STATISTIC</h3>
-    <div id="statistic">
-        <p>Market cap</p> <p>{{overview.marketCap}}</p>
-        <p>Market Dominance</p> <p>{{overview.marketDominance}}</p>
-        <p>Trading Volume (24h)</p> <p>{{overview.tradingVolume}}</p>
-        <p>Volume / Market Cap</p> <p>{{overview.quotient}}</p>
-        <p>Highest price</p> <p>{{overview.highestPrice}}</p>
-        <p>Lowest price</p> <p>{{overview.lowestPrice}}</p>
+
+    <div>
+        <h3>STATISTIC</h3>
+        <div id="statistic">
+            <p class="grey-cell" id="table-text">Market cap <img src="../../assets/icons/information.svg" alt="information-icon"></p> 
+            <p class="grey-cell"><strong>{{overview.marketCap}}</strong></p>
+            <p class="white-cell" id="table-text">Market Dominance <img src="../../assets/icons/information.svg" alt="information-icon"></p> 
+            <p class="white-cell"><strong>{{overview.marketDominance}}</strong></p>
+            <p class="grey-cell" id="table-text">Trading Volume (24h) <img src="../../assets/icons/information.svg" alt="information-icon"></p> 
+            <p class="grey-cell" id="table-text"><strong>{{overview.tradingVolume}}</strong></p>
+            <p class="white-cell" id="table-text">Volume / Market Cap <img src="../../assets/icons/information.svg" alt="information-icon"></p> 
+            <p class="white-cell"><strong>{{overview.quotient}}</strong></p>
+            <p class="grey-cell" id="table-text">Highest price</p> <p class="grey-cell"><strong>{{overview.highestPrice}}</strong></p>
+            <p class="white-cell" id="table-text">Lowest price</p> <p class="white-cell"><strong>{{overview.lowestPrice}}</strong></p>
+        </div>
     </div>
+    
     <div id="diagram">
         <h3>MONTHLY PROFIT, %</h3>
         <google-chart [data]="stackedColumnChart"></google-chart>

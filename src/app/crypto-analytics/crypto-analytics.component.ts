@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { GoogleChartInterface, GoogleChartType } from "ng2-google-charts";
 
 @Component({
@@ -7,6 +7,8 @@ import { GoogleChartInterface, GoogleChartType } from "ng2-google-charts";
   styleUrls: ["./crypto-analytics.component.css"]
 })
 export class CryptoAnalyticsComponent implements OnInit {
+  @Input() bitcoinOverviewOpened: boolean = false;
+  
   public piedata!: Object[];
   public chartLabel!: Object;
   public legend!: object;

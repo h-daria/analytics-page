@@ -1,6 +1,7 @@
 <div class="crypto-info-container">
     <section class="diagrams">
-        <img src="{{selectedCryptocurrency?.diagrams?.diagram1Path}}" alt="">
+        <img src="{{selectedCryptocurrency?.diagrams?.diagram1Path}}" alt="diagram">
+        <img src="{{selectedCryptocurrency?.diagrams?.diagram2Path}}" alt="diagram" *ngIf="bitcoinOverviewOpened">
     </section>
     <section class="info">
         <div class="infotext">
@@ -21,7 +22,7 @@
             </div>
 
             <div class="levels">
-                <h2 [ngStyle]="{'color': '#B91C1C'}">RESISTANT LEVELS</h2>
+                <h2 style="color: '#B91C1C'">RESISTANT LEVELS</h2>
                 <p>
                     <strong>Long</strong> -  breakout of the level with a retest of 
                     <strong class="red-interpolation">{{selectedCryptocurrency?.resistantLevels?.long?.level}}</strong>
@@ -37,7 +38,7 @@
             </div>
 
             <div class="levels">
-                <h2 [ngStyle]="{'color': '#15803D'}">SUPPORT LEVELS</h2>
+                <h2 style="color: '#15803D'">SUPPORT LEVELS</h2>
                 <p>
                     <strong>Long</strong> - pullback of the level 
                     <strong class="green-interpolation">{{selectedCryptocurrency?.supportLevels?.long?.level}}</strong> 
@@ -52,12 +53,17 @@
                 </p>
             </div>
         </div>
-        <button id="upgrAnalytics">Upgrade analytics</button>
+        <button id="upgrAnalytics" (click)="bitcoinOverviewOpened = !bitcoinOverviewOpened" 
+        [ngStyle]="{'visibility': bitcoinOverviewOpened ? 'hidden' : 'visible'}">Upgrade analytics</button>
+
+        <div id="addInfo" *ngIf="bitcoinOverviewOpened">
+            <app-additional-info ></app-additional-info>
+        </div>
     </section>
 </div>
 
-<div class="analytics">
-    <app-crypto-analytics></app-crypto-analytics>
+<div >
+    <app-crypto-analytics [bitcoinOverviewOpened]="bitcoinOverviewOpened"></app-crypto-analytics>
 </div>
 
-<app-additional-info></app-additional-info>
+

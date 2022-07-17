@@ -1,4 +1,3 @@
-import { DatePipe } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Cryptocurrency } from '../models/cryptocurrency';
 
@@ -9,7 +8,7 @@ import { Cryptocurrency } from '../models/cryptocurrency';
 })
 export class CryptocurrencyInfoComponent implements OnInit {
   @Input() selectedCryptocurrency: Cryptocurrency | null = null;
-
+  public bitcoinOverviewOpened: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

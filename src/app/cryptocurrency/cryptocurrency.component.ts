@@ -14,6 +14,7 @@ export class CryptocurrencyComponent implements OnInit {
   public constantCryptocurrencies: Cryptocurrency[] = [];
   public cryptoCategories: CryptoCategory[] = [];
   selectedCryptocurrency: Cryptocurrency | null = null;
+  
   constructor(private cryptocurrencyService: CryptocurrencyService) { }
 
   ngOnInit(): void {
@@ -46,15 +47,8 @@ export class CryptocurrencyComponent implements OnInit {
     );
   }
 
-  getCryptocurrencyByAbbreviation(abbrev: string) {
-    let cryptocurrency = this.cryptocurrencies.find( item => item.abbreviation == abbrev);
-  }
-
   toggle(e: any) {
     this.dropdownOpened = e as boolean;
   }
 
-  logC(cryptocurrency: any) {
-    console.log(cryptocurrency)
-  }
 }

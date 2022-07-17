@@ -1,5 +1,5 @@
-<div class="analytics">
-    <div class="tables-container">
+<div class="analytics" [class.analytics-changed]="bitcoinOverviewOpened">
+    <div class="tables-container" [ngStyle]="{width: bitcoinOverviewOpened ? '100%' : '60%'}">
         <h1>Эффективность сделок с инструментом Биткоин</h1>
         <section class="tables">
             <div id="table1">
@@ -27,7 +27,7 @@
         </section>
     </div>
    
-    <section class="diagrams">
+    <section class="diagrams" [ngStyle]="{width: bitcoinOverviewOpened ? '100%' : '50%'}">
             <div id="diagram1">
                 <div id="diagram1-header">
                     <h1 style="margin: 0;">Equity (+30%)</h1>
