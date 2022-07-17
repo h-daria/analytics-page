@@ -17,6 +17,7 @@ import { ChartModule } from '@syncfusion/ej2-angular-charts';
 import { AccumulationChartModule } from '@syncfusion/ej2-angular-charts';
 import { PieSeriesService, AccumulationLegendService, AccumulationTooltipService, AccumulationAnnotationService, AccumulationDataLabelService } from '@syncfusion/ej2-angular-charts';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import { InfoPageComponent } from './info-page/info-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
     CryptocurrencyInfoComponent,
     AdditionalInfoComponent,
     CryptoAnalyticsComponent,
+    InfoPageComponent,
   ],
   imports: [
     FormsModule,
