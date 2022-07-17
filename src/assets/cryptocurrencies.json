@@ -45,6 +45,7 @@
       "abbreviation": "FLW",
       "iconPath": "../../assets/icons/bitcoin.svg",
       "category": "",
+      "date": "",
       "diagrams": {
         "diagram1Path": "../assets/diagrams/diagram1.svg",
         "diagram2Path": "../assets/diagrams/diagram2.svg"
