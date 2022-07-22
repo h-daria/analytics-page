@@ -37,31 +37,28 @@ export class CryptoAnalyticsComponent implements OnInit {
       colors: ["#299000"],
       hAxis: { minValue: -10, maxValue: 40},
       pointSize: 5,
-      crosshair: { trigger: 'both', focused: { color: 'grey'} }
+      crosshair: { trigger: 'both', focused: { color: 'grey'} },
+      'tooltipFontSize': 11,
     }
+  };
+
+  public pieChart: GoogleChartInterface = {
+    chartType: GoogleChartType.PieChart,
+    dataTable: {
+          cols: [ {label: 'Deals', type: 'string'},
+                  {label: 'Percentage', type: 'number'},
+                  {type: 'string', role: 'tooltip'} ],
+          rows: [ {c:[{v: 'Profitable deals'}, {v: 70}, {v: 'Profitable deals: 13466'}]},
+                  {c:[{v: 'Unprofitable deals'}, {v: 30}, {v: 'Unprofitable deals: 446'}]} ]
+    },
+    options: {
+      'tooltipFontSize': 11,
+      legend: { position: "none" },
+      colors: ["#D0ECC5", "#FFB0B0"],
+      pieSliceTextStyle: {color: 'black', fontSize: '10'}
+    },
   };
   constructor() { }
 
-  ngOnInit(): void {
-    this.piedata = [
-      { name: 'Profitable deals', value: 70, text: '13466', color: "#D0ECC5" },
-      { name: 'Unprofitable deals', value: 30, text: '446', color: "#FFB0B0" }    
-    ]
-
-    this.chartLabel = {
-      visible: true,
-      position: 'Inside',
-      name: 'text'
-    }
-
-    this.legend = {
-      visible: false,
-    }
-
-    this.pointColorMapping = "color";
-  }
-
-
-
-  
+  ngOnInit(): void {}
 }

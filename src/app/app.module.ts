@@ -13,9 +13,6 @@ import { CryptocurrencyInfoComponent } from './cryptocurrency-info/cryptocurrenc
 import { AdditionalInfoComponent } from './additional-info/additional-info.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CryptoAnalyticsComponent } from './crypto-analytics/crypto-analytics.component';
-import { ChartModule } from '@syncfusion/ej2-angular-charts';
-import { AccumulationChartModule } from '@syncfusion/ej2-angular-charts';
-import { PieSeriesService, AccumulationLegendService, AccumulationTooltipService, AccumulationAnnotationService, AccumulationDataLabelService } from '@syncfusion/ej2-angular-charts';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { InfoPageComponent } from './info-page/info-page.component';
 
@@ -38,12 +35,9 @@ import { InfoPageComponent } from './info-page/info-page.component';
     BrowserAnimationsModule,
     NgbModule,
     HttpClientModule,
-    ChartModule,
-    AccumulationChartModule,
     Ng2GoogleChartsModule
   ],
-  providers: [PieSeriesService, AccumulationLegendService, AccumulationTooltipService, AccumulationDataLabelService,
-    AccumulationAnnotationService,],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
